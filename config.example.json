@@ -1,0 +1,58 @@
+{
+  "server": {
+    "port": 80,
+    "secure": false,
+    "websocketPath": "/connect",
+    "certificates": {
+      "key": "path/to/key",
+      "cert": "path/to/cert"
+    }
+  },
+  "api": {
+    "enabled": true,
+    "authorization": "password"
+  },
+  "whitelist": {
+    "enabled": true,
+    "list": []
+  },
+  "operators": [],
+  "welcomeMessage": "LunarSocket made by SolarTweaks with love <3",
+  "database": {
+    "type": "instanceStorage",
+    "config": {
+      "mongo": "mongodb://<password>@localhost:27017",
+      "filePath": "/path/to/file.json"
+    }
+  },
+  "roles": {
+    "admin": {
+      "console": true,
+      "iconColor": "0xff0000",
+      "plusColor": "0xffc800",
+      "permissions": ["*"]
+    },
+    "helper": {
+      "console": true,
+      "iconColor": "0x00ff00",
+      "plusColor": "0x00ff00",
+      "permissions": ["command.online"]
+    },
+    "vip": {
+      "console": false,
+      "iconColor": "0x00ffff",
+      "plusColor": "0xffff00",
+      "permissions": []
+    },
+    "default": {
+      "console": false,
+      "iconColor": "0xffffff",
+      "plusColor": "0x00ff00",
+      "permissions": []
+    }
+  },
+  "commands": {
+    "stop": "sudo systemctl stop lunarsocket",
+    "restart": "sudo systemctl restart lunarsocket"
+  }
+}
